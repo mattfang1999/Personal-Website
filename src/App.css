@@ -1,6 +1,72 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+margin:0;
+padding: 0;
+}
+
+body{
+  font-family: 'Open Sans',serif;
+}
+
+
+
+/* nav {
+  height: 100%;
+  background-color: black;
+  color: white;
+} */
+
+nav
+{
+height: 100%;
+padding:5%;
+background: linear-gradient(135deg, orange, orange 30%, cyan);
+}
+
+nav li
+{
+  list-style-type: none;
+  text-decoration: none;
+  margin: 5%;
   text-align: center;
 }
+
+.active
+{
+font-weight: bolder;
+}
+
+#nav-space{
+  height: 100%;
+  text-align: center;
+  padding-top: 50%;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#nav-name{
+  text-align: center;
+  color: white;
+  padding-top: 20%;
+  font-size: 1.8rem;
+  
+}
+
+
+
+
+  .App
+  {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  }
+
+
+/* .App {
+  text-align: center;
+} */
 
 .App-logo {
   height: 40vmin;
