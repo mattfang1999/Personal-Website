@@ -3,9 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router,Route} from "react-router-dom";
 
+//Component Imports
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
-
+//Rendering IImports
 import Home from './contents/Home';
 
 function App() {
@@ -19,8 +20,6 @@ function App() {
       </Route>
 
       <Projects />
-
-
       </div>
 
     </Router>
