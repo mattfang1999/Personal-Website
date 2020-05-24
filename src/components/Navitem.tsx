@@ -1,35 +1,23 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 interface INavitem {
     name:string
     tolink: string
   }
 
-interface IState{
-    state: boolean;
-}
 
 
-export class Navitem extends React.Component<INavitem, IState> {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            state: false
-        };
-      }
+export class Navitem extends React.Component<INavitem> {
 
 
     render() {
-      return (     
-        <Link to={this.props.tolink} >
-            <li>{this.props.name}</li>
-        </Link>
-                
-        
-        
-            );
+      return (    
+        <NavLink exact to={this.props.tolink} activeClassName="current"> 
+                <li>{this.props.name}</li>    
+        </NavLink>              
+        );
     }
   }
 
