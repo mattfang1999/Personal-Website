@@ -23,10 +23,11 @@ export class Navitem extends React.Component<INavitem, IState> {
 
     render() {
       return (     
-            <li>
-                <Link to={this.props.tolink} ></Link>
-                {this.props.name}
-            </li>
+        <Link to={this.props.tolink} >
+            <li>{this.props.name}</li>
+        </Link>
+                
+        
         
             );
     }

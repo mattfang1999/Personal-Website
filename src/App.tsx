@@ -1,30 +1,52 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router,Route} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import 'typeface-roboto';
 
 //Component Imports
 import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-//Rendering IImports
+
+//Rendering Imports
 import Home from './contents/Home';
+import Projects from './contents/Projects';
+import About from './contents/About';
+import Contact from './contents/Contact';
 
 function App() {
   return (
-    <div className='App'>
-    <Router>
-      <div>
-      <Navbar/>
-      <Route exact path="/" component={Home}>
-        <Home />
-      </Route>
+    
 
-      <Projects />
-      </div>
+    <Router>
+      <div className = 'App'>
+        <Navbar/>
+        <Switch>
+          
+          <Route exact path='/'>
+            <Home />
+          </Route>
+
+          <Route exact path='/about'>
+            <About />
+          </Route>
+          
+          <Route exact path='/projects'>
+            <Projects />
+          </Route>
+
+          <Route exact path='/Contact'>
+            <Contact />
+          </Route>
+        </Switch>
+
+
+     </div>
 
     </Router>
+
+
   
-    </div>
+    
 
     
   );
