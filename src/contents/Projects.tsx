@@ -1,14 +1,54 @@
 import React from 'react';
+import CardList from '../constants'
+import Grid from "@material-ui/core/Grid";
+import Card from "../components/Card"
+import { makeStyles } from '@material-ui/core/styles';
 
-class Projects extends React.Component {
-  render() {
+const useStyles = makeStyles({
+  gridContainer: {
+    paddingLeft:"20px",
+    paddingRight:'20px'
+  }
+});
+
+
+
+export const Projects = () => {
+  const classes = useStyles();
+
+  const getProjectCard = (projectCard) => {
+    const {title, subtitle, description, imgSrc} = projectCard
     return (
-    <div>
-        <h1>Projects Page</h1>
-    </div>
-    
+    <Grid item sm={4} xs={12}>
+      <Card {...projectCard}/>
+    </Grid>
     );
   }
-}
+  
+  return (
+    <div className='project-body'>
+      <Grid container spacing={4} className = {classes.gridContainer} justify='center'>
+        <Grid item project-header sm={12}>
+            <h1>Take a Look at My Projects!</h1>
+        </Grid>
+
+       
+          {CardList.map(card => getProjectCard(card))} 
+        
+
+        <Grid item sm={4} xs={12}>
+          <Card title="Card 1" subtitle='This is the first subtitle' imgSrc='./images/matt_pic.png' description="Hello"/>
+        </Grid>
+        <Grid item sm={4} xs={12}>
+          <Card title="Card 2" subtitle='This is the second subtitle'/>
+        </Grid>
+        <Grid item sm={4} xs={12}>
+          <Card />
+        </Grid>
+      </Grid>
+    </div>
+  );
+};
+
 
 export default Projects;

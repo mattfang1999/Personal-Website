@@ -142,6 +142,15 @@ a :hover{
   display:inline-block;
 }
 
+/* Project CSS */
+.project-body{
+  width: 100%;
+}
+
+.project-body h1{
+  text-align: center;
+}
+
 
 /* .App {
   text-align: center;
