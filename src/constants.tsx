@@ -1,23 +1,28 @@
-export default[
-    {
-        title: 'title 1',
-        subtitle: 'subtitle 1',
-        description: 'description 1',
-        imgSrc: './simages/paint.png'
-    },
+import "./images/publicart.png";
+import "./images/pitbull.png";
+import "./images/workday.png";
 
-    {
-        title: 'title 2',
-        subtitle: 'subtitle 2',
-        description: 'description 2',
-        imgSrc: './images/paint.png'
-    },
+export default [
+  {
+    title: "Finding Pitbulls Homes Through a Fun-Friendly Fostering Form",
+    description: "UX + UI Design",
+    bodyHeader: "Biggies Bullies Redesign",
+    imgSrc: "../images/pitbull.png"
+  },
 
-    {
-        title: 'title3',
-        subtitle: 'subtitle 3',
-        description: 'description 3',
-        imgSrc: './images/paint.png'
-    }
+  {
+    title:
+      "Improving Public Art Appreciation and Social Connectivity Through a Life-Sized Circuit",
+    description: "UX Research",
+    bodyHeader: "The Human Circuit",
+    imgSrc: "../images/publicart.png"
+  },
 
-]
+  {
+    title:
+      "Creating a Useful Workday System for Employees at a Creamery",
+    description: "Fullstack Development",
+    bodyHeader: "The Amazing Creamery Workday System",
+    imgSrc: "../images/workday.png"
+  }
+];

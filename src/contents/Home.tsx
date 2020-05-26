@@ -18,7 +18,7 @@ class Home extends Component {
   render() {
     return (
 
-      <div className='container'>
+      <div className='home-container'>
         <img src={profilepic} className="profilepic"></img>
         
           <div>

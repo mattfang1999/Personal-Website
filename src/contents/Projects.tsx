@@ -29,6 +29,7 @@ export const Projects = () => {
     <div className='project-body'>
       <Grid container spacing={4} className = {classes.gridContainer} justify='center'>
         <Grid item project-header sm={12}>
+            <br></br>
             <h1>Take a Look at My Projects!</h1>
         </Grid>
 
@@ -36,15 +37,7 @@ export const Projects = () => {
           {CardList.map(card => getProjectCard(card))} 
         
 
-        <Grid item sm={4} xs={12}>
-          <Card title="Card 1" subtitle='This is the first subtitle' imgSrc='./images/matt_pic.png' description="Hello"/>
-        </Grid>
-        <Grid item sm={4} xs={12}>
-          <Card title="Card 2" subtitle='This is the second subtitle'/>
-        </Grid>
-        <Grid item sm={4} xs={12}>
-          <Card />
-        </Grid>
+
       </Grid>
     </div>
   );
